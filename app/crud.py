@@ -560,5 +560,5 @@ def show_dashboard():
     )
 
     console.print(
-        f"Paid Payments    : {paid_payments}"
+        f"Paid Payments : {paid_payments}"
     )
