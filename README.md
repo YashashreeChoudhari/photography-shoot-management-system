@@ -1,2 +1,24 @@
-# photography-shoot-management-system
-Photography Shoot Management System is a menu-driven terminal application built with Python to manage photography shoots, client details, schedules, payments, and delivery status. It provides CRUD operations, a Rich-based terminal interface, and Excel export functionality.
+# 📸 Photography Shoot Management System
+
+A menu-driven terminal-based CRUD application built with Python.
+
+## Features
+
+- Create photography shoot records
+- View all shoots
+- Search shoots
+- Update shoot records
+- Delete shoot records
+- Dashboard with statistics
+- Rich terminal interface
+- Export data to Excel
+- JSON data storage
+
+## Technologies
+
+- Python
+- Rich
+- OpenPyXL
+- JSON
+- Git
+- GitHub
