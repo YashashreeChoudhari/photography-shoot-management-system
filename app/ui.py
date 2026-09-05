@@ -2,13 +2,9 @@ from rich.console import Console
 from rich.panel import Panel
 from rich.table import Table
 
-
 console = Console()
 
-
 def show_title():
-    """Display application title."""
-
     console.print(
         Panel(
             "[bold magenta] PHOTOGRAPHY SHOOT MANAGEMENT SYSTEM[/bold magenta]\n"
@@ -19,8 +15,6 @@ def show_title():
 
 
 def show_menu():
-    """Display the main menu."""
-
     console.print(
         Panel(
             """
@@ -40,8 +34,6 @@ def show_menu():
 
 
 def display_shoots(shoots):
-    """Display shoots in a Rich table."""
-
     if not shoots:
         console.print("[yellow]No shoot records found.[/yellow]")
         return
@@ -83,8 +75,6 @@ from rich.panel import Panel
 from rich.table import Table
 
 console = Console()
-
-# ... your existing functions ...
 
 def success(message):
     console.print(f"[bold green] {message}[/bold green]")

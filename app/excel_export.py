@@ -2,13 +2,7 @@ from openpyxl import Workbook
 from openpyxl.styles import Font, Alignment
 from pathlib import Path
 
-
-EXPORT_FILE = (
-    Path(__file__).parent.parent
-    / "exports"
-    / "photography_shoots.xlsx"
-)
-
+EXPORT_FILE = (Path(__file__).parent.parent/ "exports"/ "photography_shoots.xlsx")
 
 def export_to_excel(shoots):
     """Export shoot records to Excel."""
@@ -61,7 +55,6 @@ def export_to_excel(shoots):
             shoot["notes"],
         ])
 
-    # Adjust column widths
     for column in worksheet.columns:
         max_length = 0
         column_letter = column[0].column_letter

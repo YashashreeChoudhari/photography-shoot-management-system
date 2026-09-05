@@ -23,8 +23,6 @@ from .ui import (
 
 
 def main():
-    """Run the Photography Shoot Management System."""
-
     while True:
 
         console.clear()

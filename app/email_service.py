@@ -10,8 +10,8 @@ EMAIL_APP_PASSWORD = os.getenv("EMAIL_APP_PASSWORD")
 
 
 def send_excel_email(receiver_email, file_path):
+    
     try:
-        # Create email
         message = EmailMessage()
 
         message["Subject"] = "Photography Shoot Report"
@@ -25,11 +25,9 @@ def send_excel_email(receiver_email, file_path):
             "Photography Shoot Management System"
         )
 
-        # Read Excel file
         with open(file_path, "rb") as file:
             file_data = file.read()
 
-        # Attach Excel file
         message.add_attachment(
             file_data,
             maintype="application",
@@ -37,12 +35,10 @@ def send_excel_email(receiver_email, file_path):
             filename=os.path.basename(file_path)
         )
 
-        # Connect to Gmail
         with smtplib.SMTP("smtp.gmail.com", 587) as server:
             server.starttls()
             server.login(EMAIL_ADDRESS, EMAIL_APP_PASSWORD)
 
-            # Send email
             server.send_message(message)
 
         return True
@@ -61,4 +57,4 @@ if __name__ == "__main__":
     )
 
     if success:
-        print("✅ Excel report sent successfully!")
+        print("Excel report sent successfully!")
